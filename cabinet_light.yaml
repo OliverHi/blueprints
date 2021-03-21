@@ -1,0 +1,35 @@
+blueprint:
+  name: Door-activated cabinet light
+  description: Turns on a light when the cabinet is openend, turns it off again onces it is closed
+  domain: automation
+  source_url: https://github.com/OliverHi/blueprints/cabinet_light.yaml
+  input:
+    door_entity:
+      name: Door magnet open/closed Sensor
+      selector:
+        entity:
+          domain: binary_sensor
+          device_class: opening
+    light_target:
+      name: Light
+      selector:
+        target:
+          entity:
+            domain: light
+
+# If motion is detected within the delay,
+# we restart the script.
+mode: restart
+max_exceeded: silent
+
+trigger:
+  - platform: state
+    entity_id: !input door_entity
+    to: "on"
+  - platform: state
+    entity_id: !input door_entity
+    to: "off"
+
+action:
+  - service: light.turn_{{trigger.to_state.state | lower}}
+    target: !input light_target
