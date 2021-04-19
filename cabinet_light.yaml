@@ -2,7 +2,7 @@ blueprint:
   name: Door-activated cabinet light
   description: Turns on a light when the cabinet is openend, turns it off again onces it is closed
   domain: automation
-  source_url: https://github.com/OliverHi/blueprints/cabinet_light.yaml
+  source_url: https://github.com/OliverHi/blueprints/blob/main/cabinet_light.yaml
   input:
     door_entity:
       name: Door magnet open/closed Sensor
