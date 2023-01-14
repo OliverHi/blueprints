@@ -10,3 +10,6 @@ This blueprint extends the included motion sensor automation from Home Assistant
 There is also a version two of this blueprint here which fixes one issue: sometimes after turning on the lights the brightness level will be high enough which will in turn make the automation turn off the lights again. To fix this annoying but I added a new condition that checks if any lights are already on. Unfortunately it is difficult to use a target selector in a condition so this is just a workaround that will most likely only work if you only select entities (no conditions or groups). A full explanation can be found on my [blog here](https://thesmarthomejourney.com/2022/02/20/target-selector-in-a-condition/).
 
 PS: V2 now supports more than one motion sensor as an input. Each one will trigger the lights, currently only one brightness sensor is used though.
+
+## Reminder with physical button support
+This blueprint extends the existing [great advanced medication reminder](https://community.home-assistant.io/t/advanced-medication-reminder) by Mati24 by adding support for a physical button that can also dismiss the notification and reset the automation timer. It currently only supports buttons connected via ZHA that send a zha_event with a single click.
