@@ -12,4 +12,4 @@ There is also a version two of this blueprint here which fixes one issue: someti
 PS: V2 now supports more than one motion sensor as an input. Each one will trigger the lights, currently only one brightness sensor is used though.
 
 ## Reminder with physical button support
-This blueprint extends the existing [great advanced medication reminder](https://community.home-assistant.io/t/advanced-medication-reminder) by Mati24 by adding support for a physical button that can also dismiss the notification and reset the automation timer. It currently only supports buttons connected via ZHA that send a zha_event with a single click.
+This blueprint extends the existing [great advanced medication reminder](https://community.home-assistant.io/t/advanced-medication-reminder) by Mati24 by adding support for a physical button that can also dismiss the notification and reset the automation timer. It currently only supports buttons connected via ZHA that send a zha_event with a single click. A full explanation how this was built and how to use this can be found on [my blog](https://thesmarthomejourney.com/2023/01/14/reminders-via-home-assistant/).
